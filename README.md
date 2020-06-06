@@ -30,7 +30,6 @@ Question 1:  What are the top ten most used words grouped by user star rating re
 
 By using the Parquet compression scheme with in (MEMORY_ONLY) memory management in combination with Marshal serialization protocol I achieved top performance for my code with a run time of 138.481 sec, a 30% downtime from the midterm run time code. In the context of Spark, I used Marshal Serializer because it is faster but doesn’t support many different data types like pickle. My data type was in JSON but I converted them to Parquet data type because it gave me faster read performance. Also, I compressed them in GZIP format. 
 Other than this one I tried many Pickle serializations with different optimization technics like cache, persist in MEMORY_ONLY or persist in DISK_ONLY. I compressed Jason data types into GZIP, but it didn’t gave my good run time performance. In overall all these other attempts gave me a higher run time performance than my best final optimization as you can see on the ‘Pivot’ table. 
-You will find attached the best optimizer code with Marshall serialization and the parquet data you will find them on the Google drive provided below. 
 
-https://drive.google.com/open?id=1NOdUn6zy8qmqGWS0iNTi-X0QrPVH_Tgq
+
 
